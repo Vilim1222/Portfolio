@@ -49,6 +49,7 @@ main {
     margin: 0 auto;
 }
 
+/* For square photos */
 .photo {
     padding-top: 150%; /* Aspect ratio for square */
     position: relative;
@@ -59,38 +60,45 @@ main {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.photo:nth-child(odd) {
-    transition-delay: 0.1s;
+/* For horizontal photos */
+.horizontal-photo {
+    grid-column: span 2;
+    padding-top: 50%; /* Aspect ratio for horizontal */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.photo:nth-child(even) {
-    transition-delay: 0.2s;
+/* For vertical photos */
+.vertical-photo {
+    padding-top: 100%; /* Aspect ratio for vertical */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.photo:hover {
+.photo:hover,
+.horizontal-photo:hover,
+.vertical-photo:hover {
     transform: scale(1.05);
 }
 
-.photo.visible {
-    opacity: 1;
-    transform: scale(1);
+/* Ensuring the rows with 2 photos fit the same width as 3 square photos */
+.portfolio div {
+    width: 100%;
 }
 
 @media (max-width: 768px) {
     .portfolio {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio {
         grid-template-columns: 1fr;
     }
-
-    nav a {
-        padding: 5px 10px;
-        font-size: 14px;
-    }
+}
 
     .logo img {
         max-height: 30px;
