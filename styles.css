@@ -84,7 +84,9 @@ main {
 }
 
 .photo:hover,
-.horizontal-photo:hover,
+.horizontal-photo:hover, {
+    transform: scale(0.77);
+}
 .vertical-photo:hover {
     transform: scale(1.05);
 }
