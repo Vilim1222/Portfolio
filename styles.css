@@ -1,18 +1,9 @@
-
-/* Import the Swiss 721 font */
-@import url('https://fonts.cdnfonts.com/css/swiss-721');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* Your existing styles */
 
 body {
     font-family: 'Swiss 721', sans-serif;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -22,84 +13,43 @@ header {
     padding: 20px;
 }
 
-.logo img {
-    max-height: 40px;
-}
-
-nav a {
+header nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    color: black;
 }
 
-main {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.portfolio {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 100%;
+.container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* For square photos */
-.photo {
-    padding-top: 150%; /* Aspect ratio for square */
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-    transform: scale(0.95);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
-/* For horizontal photos */
-.horizontal-photo {
-    grid-column: span 2;
-    padding-top: 50%; /* Aspect ratio for horizontal */
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-    transform: scale(0.95);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-/* For vertical photos */
-.vertical-photo {
-    padding-top: 100%; /* Aspect ratio for vertical */
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    opacity: 1;
-    transform: scale(0.95);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.photo:hover,
-.horizontal-photo:hover,
-.vertical-photo:hover {
-    transform: scale(1.05);
-}
-
-/* Ensuring the rows with 2 photos fit the same width as 3 square photos */
-.portfolio div {
+.photo-grid img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.photo-grid .horizontal {
+    grid-column: span 2;
 }
 
 @media (max-width: 768px) {
-    .portfolio {
+    .photo-grid {
         grid-template-columns: 1fr;
     }
+    .photo-grid .horizontal {
+        grid-column: span 1;
+    }
 }
+
 
     .logo img {
         max-height: 30px;
