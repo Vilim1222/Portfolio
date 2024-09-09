@@ -80,7 +80,7 @@ main {
     background-position: center;
     opacity: 1;
     transform: scale(0.95);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.6s ease, 
 }
 
 .photo:hover,
