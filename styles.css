@@ -61,15 +61,9 @@ main {
 }
 
 /* For horizontal photos */
-.horizontal-photo {
+ .horizontal-photo {
     grid-column: span 2;
-    padding-top: 50%; /* Aspect ratio for horizontal */
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    transform: scale(0.95);
-    opacity: 1;
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    height: calc(100% + 10px);
 }
 
 /* For vertical photos */
