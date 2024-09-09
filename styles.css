@@ -63,7 +63,7 @@ main {
 /* For horizontal photos */
 .horizontal-photo {
     grid-column: span 2;
-    padding-top: 50%; /* Aspect ratio for horizontal */
+    padding-top: 150%; /* Aspect ratio for horizontal */
     position: relative;
     background-size: cover;
     background-position: center;
