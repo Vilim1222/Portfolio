@@ -40,86 +40,55 @@ main {
     flex-direction: column;
 }
 
-/* Portfolio Grid Layout */
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
-    grid-template-rows: auto; /* Automatically adjust row height */
-    grid-template-areas: 
-        "photo1 photo2 photo3"
-        "photo4 photo4 photo5"
-        "photo6 photo7 photo8"
-        "photo9 photo9 photo10";
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Individual photo styling */
+/* For square photos */
 .photo {
     position: relative;
     background-size: cover;
     background-position: center;
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    
+    opacity: 1;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+/* For horizontal photos */
 .horizontal-photo {
-    grid-column: span 2; /* Span across two columns */
-    aspect-ratio: 2/1; /* Set ratio for horizontal photos */
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.6s ease, opacity 0.6s ease;
-}
-/* Specific grid area assignments */
-.photo1 { grid-area: photo1; }
-.photo2 { grid-area: photo2; }
-.photo3 { grid-area: photo3; }
-.photo4 { 
-    grid-area: photo4; 
-    aspect-ratio: 2/1; /* Horizontal photo spanning two columns */
-}
-.photo5 { grid-area: photo5; }
-.photo6 { grid-area: photo6; }
-.photo7 { grid-area: photo7; }
-.photo8 { grid-area: photo8; }
-.photo9 { 
-    grid-area: photo9;
-    aspect-ratio: 2/1; /* Horizontal photo spanning two columns */
-}
-.photo10 { grid-area: photo10; }
-
-/* Ensures consistent height for vertical photos */
-.photo:not(.photo4):not(.photo9) {
-    aspect-ratio: 1/1.5; /* 3:2 vertical photos */
+    grid-column: span 2;
+    padding-top: 65%; /* Aspect ratio for 3:2 horizontal photos */
 }
 
-.photo:hover {
+/* For vertical photos */
+.vertical-photo {
+    padding-top: 150%; /* Aspect ratio for 2:3 vertical photos */
+}
+
+.photo:hover,
+.horizontal-photo:hover,
+.vertical-photo:hover {
     transform: scale(1.05);
 }
 
-/* Responsive adjustments for smaller screens */
+/* Ensuring the rows with 2 photos fit the same width as 3 square photos */
+.portfolio div {
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .portfolio {
-        grid-template-columns: 1fr; /* One column on smaller screens */
-        grid-template-areas: 
-            "photo1"
-            "photo2"
-            "photo3"
-            "photo4"
-            "photo5"
-            "photo6"
-            "photo7"
-            "photo8"
-            "photo9"
-            "photo10";
+        grid-template-columns: 1fr;
     }
+}
 
-    .photo4, .photo9 {
-        grid-column: span 1;
-        aspect-ratio: 1.5/1; /* Adjust horizontal photo size for smaller screens */
-    }
+.logo img {
+    max-height: 30px;
 }
 
 /* Contact Form Styling */
