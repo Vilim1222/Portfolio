@@ -61,8 +61,12 @@ main {
 
 /* For horizontal photos */
 .horizontal-photo {
-    grid-column: span 3;
-    padding-top: 65%;  /*Aspect ratio for 3:2 horizontal photos */
+    grid-column: span 2; /* Span across two columns */
+    padding-top: calc(100% / 2); /* Half the aspect ratio to match two vertical photos */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
 /* For vertical photos */
