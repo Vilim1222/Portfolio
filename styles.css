@@ -42,59 +42,56 @@ main {
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
     gap: 20px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* For square photos */
-.photo {
-    position: relative;
+.photo, .horizontal-photo, .vertical-photo {
     background-size: cover;
     background-position: center;
-    opacity: 1;
-    transform: scale(0.95);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-/* For horizontal photos */
-.horizontal-photo {
-    grid-column: span 2;
-    padding-top: 65%; /* Aspect ratio for 3:2 horizontal photos */
+.photo:hover, .horizontal-photo:hover, .vertical-photo:hover {
+    transform: scale(1.05);
 }
 
-/* For vertical photos */
+/* Grid Configuration */
+
+/* Regular vertical photo */
 .vertical-photo {
     padding-top: 150%; /* Aspect ratio for 2:3 vertical photos */
 }
 
-.photo:hover,
-.horizontal-photo:hover,
-.vertical-photo:hover {
-    transform: scale(1.05);
+/* Horizontal photo, spanning 2 columns */
+.horizontal-photo {
+    grid-column: span 2; /* Span across two columns */
+    padding-top: calc(100% / 2); /* Half the aspect ratio */
 }
 
-/* Ensuring the rows with 2 photos fit the same width as 3 square photos */
+/* Ensure rows with 2 photos fit the same width as 3 square photos */
 .portfolio div {
     width: 100%;
 }
 
+/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .portfolio {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Single column layout for small screens */
     }
-}
 
-.logo img {
-    max-height: 30px;
+    .horizontal-photo {
+        grid-column: span 1; /* Span 1 column for small screens */
+    }
 }
 
 /* Contact Form Styling */
 .contact-form {
     padding: 40px 20px;
-    max-width: 800px; /* Increased width */
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -118,7 +115,7 @@ main {
     border-radius: 5px;
     outline: none;
     transition: border-color 0.3s ease;
-    width: 100%; /* Make inputs and textarea full-width */
+    width: 100%;
 }
 
 .contact-form input:focus, 
@@ -141,7 +138,7 @@ main {
     font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    width: 100%; /* Make the button full-width */
+    width: 100%;
 }
 
 .contact-form button:hover {
