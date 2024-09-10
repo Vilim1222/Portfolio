@@ -61,7 +61,7 @@ main {
 
 /* For horizontal photos */
 .horizontal-photo {
-    grid-column: span 2;
+    grid-column: span 3;
     padding-top: 65%;  /*Aspect ratio for 3:2 horizontal photos */
 }
 
