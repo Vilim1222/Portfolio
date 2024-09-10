@@ -62,8 +62,16 @@ main {
     background-size: cover;
     background-position: center;
     transition: transform 0.6s ease, opacity 0.6s ease;
+    
 }
-
+.horizontal-photo {
+    grid-column: span 2; /* Span across two columns */
+    aspect-ratio: 2/1; /* Set ratio for horizontal photos */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
 /* Specific grid area assignments */
 .photo1 { grid-area: photo1; }
 .photo2 { grid-area: photo2; }
