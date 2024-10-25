@@ -21,6 +21,12 @@ header {
     padding: 20px;
 }
 
+h2 {
+    text-align: left;
+    padding-top: 20px; /* Adjust the value for more or less spacing */
+    margin-bottom: 10px; /* Space between the headline and the photo */
+}
+
 .logo img {
     max-height: 40px;
 }
