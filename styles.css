@@ -21,17 +21,17 @@ header {
     padding: 20px;
 }
 
-.headline {
-    text-align: left;
-    padding-top: 20px; /* Adjust the value as needed */
-    margin-bottom: 10px;
+section .headline {
+    text-align: left !important; /* Force the text to align left */
+    padding-top: 20px;           /* Add padding to the top */
+    margin-bottom: 10px;         /* Space between headline and photos */
+    font-size: 24px;             /* Adjust font size */
 }
 
-h2 {
-    text-align: left;
-    padding-top: 20px; /* Adjust the value for more or less spacing */
-    margin-bottom: 10px; /* Space between the headline and the photo */
+section h2 {
+    text-align: left !important; /* Force h2 to align left */
 }
+
 
 .logo img {
     max-height: 40px;
