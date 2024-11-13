@@ -96,6 +96,7 @@ main {
     }
 
     .horizontal-photo {
+        padding-top: 130%;
         grid-column: span 1; /* Span 1 column for small screens */
         max-height: 500px; /* Maksimalna visina za horizontalne fotografije */
     }
