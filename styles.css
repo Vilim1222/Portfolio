@@ -90,7 +90,6 @@ main {
     width: 100%;
 }
 
-/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .portfolio {
         grid-template-columns: 1fr; /* Single column layout for small screens */
@@ -98,6 +97,11 @@ main {
 
     .horizontal-photo {
         grid-column: span 1; /* Span 1 column for small screens */
+        max-height: 400px; /* Maksimalna visina za horizontalne fotografije */
+    }
+
+    .vertical-photo {
+        max-height: 500px; /* Maksimalna visina za vertikalne fotografije */
     }
 }
 
