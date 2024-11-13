@@ -76,13 +76,15 @@ main {
 
 /* Regular vertical photo */
 .vertical-photo {
-    padding-top: 150%; /* Aspect ratio for 2:3 vertical photos */
+    aspect-ratio: 3 / 4;
+    /* padding-top: 150%; */
 }
 
 /* Horizontal photo, spanning 2 columns */
 .horizontal-photo {
+     aspect-ratio: 3 / 4;
     grid-column: span 2; /* Span across two columns */
-    padding-top: calc(100% / 2); /* Half the aspect ratio */
+    /* padding-top: calc(100% / 2); */
 }
 
 /* Ensure rows with 2 photos fit the same width as 3 square photos */
