@@ -82,7 +82,7 @@ main {
 
 /* Horizontal photo, spanning 2 columns */
 .horizontal-photo {
-     aspect-ratio: 3 / 4;
+     aspect-ratio: 4 / 3;
     grid-column: span 2; /* Span across two columns */
     /* padding-top: calc(100% / 2); */
 }
