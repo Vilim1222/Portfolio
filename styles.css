@@ -97,10 +97,6 @@ main {
     .portfolio {
         grid-template-columns: 1fr; /* Single column layout for small screens */
     }
-
-    .horizontal-photo {
-        grid-column: span 1; /* Span 1 column for small screens */
-    }
     .horizontal-photo {
     grid-column: span 2; /* Span across two columns */
   padding-top: calc(100% / 2); 
