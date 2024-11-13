@@ -76,15 +76,13 @@ main {
 
 /* Regular vertical photo */
 .vertical-photo {
-    aspect-ratio: 3 / 4;
-    /* padding-top: 150%; */
+    padding-top: 150%; /* Aspect ratio for 2:3 vertical photos */
 }
 
 /* Horizontal photo, spanning 2 columns */
 .horizontal-photo {
-     aspect-ratio: 4 / 3;
     grid-column: span 2; /* Span across two columns */
-    /* padding-top: calc(100% / 2); */
+    padding-top: calc(100% / 2); /* Half the aspect ratio */
 }
 
 /* Ensure rows with 2 photos fit the same width as 3 square photos */
@@ -97,15 +95,11 @@ main {
     .portfolio {
         grid-template-columns: 1fr; /* Single column layout for small screens */
     }
-    .horizontal-photo {
-    grid-column: span 2; /* Span across two columns */
-  padding-top: calc(100% / 2); 
-}
-    .vertical-photo {
-    aspect-ratio: 3 / 4;
-    padding-top: 150%; 
-}
 
+    .horizontal-photo {
+        grid-column: span 1; /* Span 1 column for small screens */
+    }
+}
 
 /* Contact Form Styling */
 .contact-form {
