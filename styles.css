@@ -6,6 +6,8 @@
     right: 20px;
     text-align: right;
     font-size: 14px;
+    font-weight: normal; /* Da uklonite bold */
+    line-height: 1.2;
     color: #000; /* Prilagodi boju teksta po želji */
 }
 * {
