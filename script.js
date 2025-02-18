@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const texts = [
         "Zagreb, Croatia",
         "vilim.tavcar@gmail.com",
-        "VILIM TAVČAR"
+        "VILIM TAVČAR" // Ovo će se pojaviti opet, ali tek nakon cijelog ciklusa
     ];
 
-    let index = 0; // Počinje od drugog teksta jer je prvi već prikazan
+    let index = 0; // Počinje od drugog teksta jer je "VILIM TAVČAR" već vidljiv
 
     function changeText() {
         textElement.style.opacity = 0;
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     setTimeout(() => {
-        setInterval(changeText, 3000); // Pokreće rotaciju teksta nakon prvog prikaza
-    }, 3000); // Pauza od 3 sekunde prije nego što krene animacija
+        changeText(); // Prva promjena teksta nakon 3 sekunde
+        setInterval(changeText, 3000); // Daljnje rotacije teksta
+    }, 3000);
 });
