@@ -1,10 +1,9 @@
 /* Import the Swiss 721 font */
 
-.roboto-mono-<uniquifier> {
-  font-family: "Roboto Mono", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+#animated-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Može biti 300 (light), 400 (regular), 700 (bold) */
+}
 }
 .contact-info {
     position: absolute;
