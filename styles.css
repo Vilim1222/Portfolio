@@ -1,8 +1,14 @@
 /* Import the Swiss 721 font */
 
+
 #animated-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400; /* Može biti 300 (light), 400 (regular), 700 (bold) */
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: right;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 }
 .contact-info {
