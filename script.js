@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const texts = [
         "Zagreb, Croatia",
         "vilim.tavcar@gmail.com",
-        "VILIM TAVČAR" // Ovo će se pojaviti opet, ali tek nakon cijelog ciklusa
+        "VILIM TAVČAR"
     ];
 
-    let index = 0; // Počinje od drugog teksta jer je "VILIM TAVČAR" već vidljiv
+    let index = 0;
 
     function changeText() {
         textElement.style.opacity = 0;
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             textElement.innerText = texts[index];
             textElement.style.opacity = 1;
             textElement.style.transform = "translateY(0)";
-            index = (index + 1) % texts.length; // Nastavlja u krug
+            index = (index + 1) % texts.length;
         }, 800);
     }
 
