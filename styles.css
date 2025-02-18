@@ -4,9 +4,9 @@
 #animated-text {
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
-    font-size: 20px; /* Povećaj prema potrebi */
+    font-size: 20px;
     text-align: right;
-    opacity: 1; /* Početno vidljivo */
+    opacity: 1;
     transform: translateY(0);
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
