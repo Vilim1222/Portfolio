@@ -1,5 +1,11 @@
 /* Import the Swiss 721 font */
-@import url('https://fonts.cdnfonts.com/css/swiss-721');
+
+.roboto-mono-<uniquifier> {
+  font-family: "Roboto Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 .contact-info {
     position: absolute;
     top: 20px;
