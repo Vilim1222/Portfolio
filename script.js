@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const texts = [
         "Zagreb, Croatia",
-        "vilim.tavcar@gmail.com",
-        "VILIM TAVČAR"
+        "vilim.tavcar@gmail.com"
     ];
 
     let index = 0;
