@@ -1,7 +1,7 @@
 /* Import the Swiss 721 font */
 
 
-/*#animated-text {
+#animated-text {
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -9,8 +9,8 @@
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
-}*/
-.container {
+}
+/*.container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +19,7 @@
     font-weight: 500;
     position: relative;
     cursor: pointer;
-    flex-wrap: wrap; /* Omogućava pravilno slaganje na manjim ekranima */
+    flex-wrap: wrap; /* Omogućava pravilno slaganje na manjim ekranima
     text-align: center;
 }
 
@@ -37,7 +37,7 @@
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-/* Animacija */
+/* Animacija 
 .container.active .name {
     transform: translateX(-100px);
 }
@@ -47,22 +47,22 @@
     transform: translateX(0);
 }
 
-/* Prilagodba za mobilne uređaje */
+/* Prilagodba za mobilne uređaje 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stavlja tekst i dugme jedno ispod drugog */
-        gap: 10px; /* Razmak između elemenata */
+        flex-direction: column; /* Stavlja tekst i dugme jedno ispod drugog 
+        gap: 10px; /* Razmak između elemenata 
     }
 
     .name {
-        font-size: 20px; /* Smanjuje veličinu teksta na manjim ekranima */
+        font-size: 20px; /* Smanjuje veličinu teksta na manjim ekranima 
     }
 
     .contact-box {
         margin-left: 0;
         padding: 10px 20px;
     }
-}
+}*/
 .container {
     display: flex;
     align-items: center;
