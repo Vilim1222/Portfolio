@@ -1,7 +1,7 @@
 /* Import the Swiss 721 font */
 
 
-#animated-text {
+/*#animated-text {
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -9,7 +9,40 @@
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}*/
+.container {
+    display: flex;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
 }
+
+.name {
+    transition: transform 0.8s ease-in-out;
+}
+
+.contact-box {
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    margin-left: 20px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.container.active .name {
+    transform: translateX(-100px);
+}
+
+.container.active .contact-box {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* ovo gore je animacija */
 
 
 .contact-info {
