@@ -1,4 +1,4 @@
-function animateContact() {
+/*function animateContact() {
     document.querySelector('.container').classList.add('active');
 }
 
@@ -6,7 +6,7 @@ function goToContact() {
     window.location.href = 'contact.html'; // Zamijeni sa stvarnom URL adresom
 }
 
-/* Import the Swiss 721 font document.addEventListener("DOMContentLoaded", function () {
+ Import the Swiss 721 font document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("animated-text");
 
     const texts = [
