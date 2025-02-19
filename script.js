@@ -1,4 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
+function animateContact() {
+    document.querySelector('.container').classList.add('active');
+}
+
+function goToContact() {
+    window.location.href = 'contact.html'; // Zamijeni sa stvarnom URL adresom
+}
+
+/* Import the Swiss 721 font document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("animated-text");
 
     const texts = [
@@ -27,3 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
         setInterval(changeText, 3000); // Daljnje rotacije svakih 3 sekunde
     }, 3000);
 });
+*/
