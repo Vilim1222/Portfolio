@@ -42,3 +42,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(changeText, 3000);
 });
+/*
