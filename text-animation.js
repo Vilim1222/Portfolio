@@ -1,3 +1,24 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Provjera postoji li element s klasom 'container'
+    let container = document.querySelector('.container');
+
+    if (container) {
+        setTimeout(() => {
+            container.classList.add('active');
+        }, 2000); // 2 sekunde kašnjenja
+    } else {
+        console.error("Element '.container' nije pronađen! Provjeri HTML strukturu.");
+    }
+
+    // Postavi event listener za klik na contact box
+    let contactBox = document.querySelector('.contact-box');
+    if (contactBox) {
+        contactBox.addEventListener("click", function () {
+            window.location.href = 'contact.html'; // Zamijeni sa stvarnom URL adresom
+        });
+    }
+});
+
 /*document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("animated-text");
 
