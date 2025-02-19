@@ -28,7 +28,7 @@
     background-color: black;
     color: white;
     padding: 15px 25px;
-    margin-left: 20px;
+    margin-left: -20px;
     opacity: 0;
     transform: translateX(-20px);
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
