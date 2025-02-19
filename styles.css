@@ -13,6 +13,59 @@
 .container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    flex-wrap: wrap; /* Omogućava pravilno slaganje na manjim ekranima */
+    text-align: center;
+}
+
+.name {
+    transition: transform 0.8s ease-in-out;
+}
+
+.contact-box {
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    margin-left: 20px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Animacija */
+.container.active .name {
+    transform: translateX(-100px);
+}
+
+.container.active .contact-box {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Prilagodba za mobilne uređaje */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stavlja tekst i dugme jedno ispod drugog */
+        gap: 10px; /* Razmak između elemenata */
+    }
+
+    .name {
+        font-size: 20px; /* Smanjuje veličinu teksta na manjim ekranima */
+    }
+
+    .contact-box {
+        margin-left: 0;
+        padding: 10px 20px;
+    }
+}
+.container {
+    display: flex;
+    align-items: center;
     font-family: 'Work Sans', sans-serif;
     font-size: 24px;
     font-weight: 500;
